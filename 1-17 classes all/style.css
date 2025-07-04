@@ -1,0 +1,13 @@
+button{
+  background-color: red;
+  color: white;
+  padding: 10px 20px ;
+  border: none;
+  border-radius: 20%;
+  transition: 0.5s;
+}
+
+button:hover{
+  background-color: blueviolet;
+  cursor: pointer;
+}

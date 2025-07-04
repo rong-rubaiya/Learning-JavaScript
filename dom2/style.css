@@ -1,0 +1,28 @@
+.main-box{
+  display: flex;
+  gap: 18px;
+  
+  flex-wrap: wrap;
+  
+}
+
+.box{
+ height: 60px;
+ width: 60px;
+ text-align: center;
+ padding-top: 8px;
+ background-color: aqua;
+ border-radius:10px;
+ 
+}
+
+
+button{
+  height: 60px;
+  width: 100px;
+  padding: 4px;
+  background-color: rgb(185, 102, 102);
+  border-radius: 10px;
+  color: wheat;
+  font-size: 16px;
+}

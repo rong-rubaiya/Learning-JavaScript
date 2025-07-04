@@ -1,0 +1,37 @@
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+#menu ul{
+  text-align: center;
+}
+
+#menu li{
+  display: inline-block;
+  border: 2px solid white;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 0;
+  box-shadow: 0 0 10px white;
+  cursor: pointer;
+}
+
+#menu li.red{
+  background-color: #c75454;
+}
+
+#menu li.green{
+  background-color: #287223;
+}
+
+#menu li.blue{
+  background-color: #2f47df;
+}
+
+#menu li.pink{
+  background-color: #220927;
+}
