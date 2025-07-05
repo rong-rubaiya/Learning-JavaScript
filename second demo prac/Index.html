@@ -10,15 +10,20 @@
   
   <div class="main">
     <h1>BMI Calculator</h1>
-    <form action="">
-      <label for="">Height</label>
-      <input type="height">
+    <form id="form" action="">
+      <label for="">Height:</label>
+      <input id="height" placeholder="In cm" type="number">
 
-      <label for="">Weight</label>
-      <input type="Weight">
-
+      <label for="">Weight:</label>
+      <input id="weight" placeholder="In KG" type="number">
+       
+      <button id="btn">
+      Calculate
+    </button>
 
     </form>
+
+    
 
     <div class="result">
       <h4>Your BMI Score</h4>
@@ -28,7 +33,7 @@
     </div>
 
     <div id="info">
-      <h4>BMI Weight guid</h4>
+      <h3>BMI Weight guid</h3>
     <p>Underweight: Less than 18.5.</p>
 
     <p>Healthy Weight: 18.5 to 24.9.</p>    
