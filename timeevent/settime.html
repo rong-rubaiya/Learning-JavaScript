@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time event</title>
+</head>
+<body>
+  
+  <button id="btn">Save</button>
+  <button id="btn-counting">Count</button>
+  <button id="btn-stop">Stop</button>
+  <p id="description"></p>
+  <p id="description-counting"></p>
+
+  <script>
+    let btnSelect=document.getElementById('btn');
+    let peraDescription=document.getElementById('description');
+
+    let btnCounting=document.getElementById('btn-counting');
+    let peraCounting=document.getElementById('description-counting');
+    let stopBtn=document.getElementById('btn-stop');
+
+    let timerId=null;
+
+    stopBtn.addEventListener('click',function(){
+      clearInterval(timerId);
+      count=0;
+      peraCounting.innerText="0";
+    })
+
+    btnSelect.addEventListener('click',saveUser);
+
+    function saveUser (){
+     peraDescription.innerText="User registration is successful";
+     setTimeout(()=>{
+      peraDescription.innerText="";
+      },5000)
+    }
+  btnCounting.addEventListener('click',countUser);
+
+  function countUser(){
+    let count=1;
+    peraCounting.innerText=count;
+    setInterval(() => {
+      count++;
+      peraCounting.innerText=count;
+    }, 1000);
+  }
+
+  </script>
+
+</body>
+</html>

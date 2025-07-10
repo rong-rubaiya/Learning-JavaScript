@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button id="start-btn">Start</button>
+  <button id="stop-btn">Stop</button>
+
+  <p id="showing"></p>
+  
+  <script>
+    let startButton=document.getElementById('start-btn')
+    let stopButton=document.getElementById('stop-btn')
+    let peraShowing=document.getElementById('showing');
+
+
+    let timerId=null;
+
+    startButton.addEventListener('click',function(){
+      let count=1;
+      peraShowing.innerText=count;
+      timerId=setInterval(() => {
+        count++;
+        peraShowing.innerText=count;
+      }, 1000);
+    })
+
+    
+
+    stopButton.addEventListener('click',function(){
+      clearInterval(timerId);
+      count=0;
+      peraShowing.innerText=0;
+        })
+  </script>
+</body>
+</html>
