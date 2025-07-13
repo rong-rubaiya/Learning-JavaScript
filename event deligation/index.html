@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event delegation</title>
+</head>
+<body>
+
+  <ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+
+  <button onclick="addElement()" class="btn">Add new</button>
+  
+
+  <script>
+let listItem=document.getElementById('list');
+
+ listItem.addEventListener('click',(e)=>{
+  if(e.target.matches('li')){
+    if(e.target.innerHTML==='1'){
+  e.target.style.backgroundColor='red';
+  e.target.style.color='white';}
+   else{
+    e.target.style.backgroundColor='blue';
+   }
+}
+ });
+
+ function addElement (){
+  const newElement=document.createElement('li');
+  newElement.innerText='5';
+  listItem.appendChild(newElement);
+ }
+  </script>
+</body>
+</html>
